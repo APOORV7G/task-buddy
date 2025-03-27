@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Buddy - Campus Services App</title>
+
+    <!-- Tailwind CSS + Daisy UI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      'brand-primary': '#0081a7',
+                      'brand-secondary': '#00afb9',
+                  },
+                  animation: {
+                      fadeIn: 'fadeIn 1s ease-out',
+                      slideIn: 'slideIn 0.5s ease-in-out',
+                  },
+                  keyframes: {
+                      fadeIn: {
+                          '0%': { opacity: '0' },
+                          '100%': { opacity: '1' },
+                      },
+                      slideIn: {
+                          '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                          '100%': { transform: 'translateY(0)', opacity: '1' },
+                      },
+                  }
+              }
+          }
+      };
+    </script>
+    <style>
+      body {
+          font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-purple-100 text-base-content">
+    <!-- Wrapper -->
+    <div class="container ">
+      <!-- ✅ Navbar -->
+      <nav class="navbar bg-base-100 shadow-md animate-slideIn">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">Task Buddy</a>
+          <img
+            src="logo.jpg"
+            class="h-10 ml-2"
+            alt="Logo"
+          />
+        </div>
+        <div class="flex-none">
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <a href="#home" class="hover:text-brand-primary transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#features"
+                class="hover:text-brand-primary transition-colors"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="hover:text-brand-primary transition-colors"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- ✅ Hero Section -->
+      <header class="hero min-h-screen bg-blue-100 animate-fadeIn" id="home">
+        <div class="hero-content text-center">
+          <div class="max-w-2xl">
+            <h1 class="text-5xl font-bold text-brand-primary">Task Buddy</h1>
+            <p class="text-lg text-gray-600 mt-4">
+              Transforming Campus Life: Your All-in-One Solution for Student
+              Services and Local Vendor Connections
+            </p>
+            <div class="flex justify-center gap-4 mt-6">
+              <button
+                class="btn btn-primary hover:scale-105 transition-transform"
+              >
+                Get Started
+              </button>
+              <button
+                class="btn btn-outline hover:bg-brand-primary hover:text-white"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ✅ Features Section -->
+      <section class="py-16" id="features">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-brand-primary">
+            Comprehensive Features
+          </h2>
+          <p class="text-xl text-gray-600 mt-4">
+            Revolutionizing Campus Services with Smart Technology
+          </p>
+        </div>
+
+        <!-- Student Features -->
+        <div class="mb-16">
+          <h3
+            class="text-3xl font-semibold text-center mb-8 text-brand-secondary"
+          >
+            Student-Specific Features
+          </h3>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="card bg-white shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-2"
+            >
+              <div class="card-body items-center text-center">
+                <img
+                  src="https://cdn.pixabay.com/photo/2013/09/16/19/21/beds-182965_1280.jpg"
+                  class="mb-4 rounded-full"
+                  alt="Affordable Subscriptions"
+                />
+                <i class="fas fa-tag text-5xl text-brand-primary"></i>
+                <h4 class="card-title">Affordable Subscriptions</h4>
+                <p class="text-gray-600">
+                  Budget-friendly plans starting from just ₹99/month, designed
+                  specifically for students
+                </p>
+              </div>
+            </div>
+            <div
+              class="card bg-white shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-2"
+            >
+              <div class="card-body items-center text-center">
+                <img
+                  src="https://cdn.pixabay.com/photo/2015/05/28/14/38/ux-787980_1280.jpg"
+                  class="mb-4 rounded-full"
+                  alt="One-Click Access"
+                />
+                <i class="fas fa-bolt text-5xl text-brand-primary"></i>
+                <h4 class="card-title">One-Click Access</h4>
+                <p class="text-gray-600">
+                  Seamless service selection with intuitive UI, reducing booking
+                  time by 70%
+                </p>
+              </div>
+            </div>
+            <div
+              class="card bg-white shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-2"
+            >
+              <div class="card-body items-center text-center">
+                <img
+                  src="https://cdn.pixabay.com/photo/2016/09/29/16/56/hourglass-1703330_1280.jpg"
+                  class="mb-4 rounded-full"
+                  alt="Smart Reminders"
+                />
+                <i class="fas fa-bell text-5xl text-brand-primary"></i>
+                <h4 class="card-title">Smart Reminders</h4>
+                <p class="text-gray-600">
+                  AI-powered personalized notifications for upcoming services
+                  and deadlines
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vendor Features -->
+        <div class="mb-16">
+          <h3
+            class="text-3xl font-semibold text-center mb-8 text-brand-secondary"
+          >
+            Vendor Ecosystem
+          </h3>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="card bg-white shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-2"
+            >
+              <div class="card-body items-center text-center">
+                <img
+                  src="https://cdn.pixabay.com/photo/2019/08/22/20/18/truck-4424342_1280.jpg"
+                  class="mb-4 rounded-full"
+                  alt="Logistics Support"
+                />
+                <i class="fas fa-truck text-5xl text-brand-primary"></i>
+                <h4 class="card-title">Logistics Support</h4>
+                <p class="text-gray-600">
+                  End-to-end delivery tracking and management with real-time
+                  updates
+                </p>
+              </div>
+            </div>
+            <div
+              class="card bg-white shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-2"
+            >
+              <div class="card-body items-center text-center">
+                <img
+                  src="https://cdn.pixabay.com/photo/2015/09/22/17/17/socialmedia-952091_1280.jpg"
+                  class="mb-4 rounded-full"
+                  alt="Marketing Assistance"
+                />
+                <i class="fas fa-bullhorn text-5xl text-brand-primary"></i>
+                <h4 class="card-title">Marketing Assistance</h4>
+                <p class="text-gray-600">
+                  Data-driven marketing strategies targeting 10,000+ student
+                  community
+                </p>
+              </div>
+            </div>
+            <div
+              class="card bg-white shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-2"
+            >
+              <div class="card-body items-center text-center">
+                <img
+                  src="https://cdn.pixabay.com/photo/2020/04/28/18/19/draw-5105755_1280.jpg"
+                  class="mb-4 rounded-full"
+                  alt="Training Modules"
+                />
+                <i
+                  class="fas fa-graduation-cap text-5xl text-brand-primary"
+                ></i>
+                <h4 class="card-title">Training Modules</h4>
+                <p class="text-gray-600">
+                  Comprehensive skill development programs for local
+                  entrepreneurs
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Platform Capabilities -->
+        <div>
+          <h3
+            class="text-3xl font-semibold text-center mb-8 text-brand-secondary"
+          >
+            Platform Capabilities
+          </h3>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="card bg-white shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-2"
+            >
+              <div class="card-body items-center text-center">
+                <img
+                  src="https://cdn.pixabay.com/photo/2017/08/23/16/04/io-centers-2673322_1280.jpg"
+                  class="mb-4 rounded-full"
+                  alt="Secure Authentication"
+                />
+                <i class="fas fa-lock text-5xl text-brand-primary"></i>
+                <h4 class="card-title">Secure Authentication</h4>
+                <p class="text-gray-600">
+                  Multi-factor authentication and end-to-end encryption
+                </p>
+              </div>
+            </div>
+            <div
+              class="card bg-white shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-2"
+            >
+              <div class="card-body items-center text-center">
+                <img
+                  src="https://cdn.pixabay.com/photo/2022/01/18/14/13/money-6947138_1280.jpg"
+                  class="mb-4 rounded-full"
+                  alt="Multiple Payments"
+                />
+                <i class="fas fa-credit-card text-5xl text-brand-primary"></i>
+                <h4 class="card-title">Multiple Payments</h4>
+                <p class="text-gray-600">
+                  Seamless integration with UPI, Credit Cards, and digital
+                  wallets
+                </p>
+              </div>
+            </div>
+            <div
+              class="card bg-white shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-2"
+            >
+              <div class="card-body items-center text-center">
+                <img
+                  src="https://cdn.pixabay.com/photo/2024/04/05/05/17/success-8676550_1280.jpg"
+                  class="mb-4 rounded-full"
+                  alt="Campus Ambassadors"
+                />
+                <i class="fas fa-users text-5xl text-brand-primary"></i>
+                <h4 class="card-title">Campus Ambassadors</h4>
+                <p class="text-gray-600">
+                  Earn rewards while promoting innovative local services
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <!-- ✅ Contact Section -->
+      <section id="contact" class="py-16">
+        <div class="text-center mb-8">
+          <h2 class="text-4xl font-bold text-brand-primary">Contact Us</h2>
+          <p class="text-lg text-gray-600 mt-2">
+            Got Questions? We're Here to Help!
+          </p>
+        </div>
+        <form class="max-w-md mx-auto">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="input input-bordered w-full mb-4"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            class="input input-bordered w-full mb-4"
+          />
+          <textarea
+            class="textarea textarea-bordered w-full mb-4"
+            placeholder="Your Message"
+            rows="4"
+          ></textarea>
+          <button class="btn btn-primary w-full">Send Message</button>
+        </form>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer p-10 bg-white text-base-content">
+        <div class="container mx-auto flex justify-between">
+          <div>
+            <div>
+              <span class="footer-title">Task Buddy</span>
+              <p class="text-gray-600 mt-2">
+                Transforming Campus Life: Your All-in-One Solution for Student
+                Services and Local Vendor Connections
+              </p>
+            </div>
+            <span class="footer-title">Connect</span>
+            <div class="flex gap-4">
+              <a href="#" class="text-2xl"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-2xl"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-2xl"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/67763dcf49e2fd8dfe018b1f/1igiu2tc7';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+  </body>
+</html>
